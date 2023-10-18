@@ -101,13 +101,13 @@ const AdminHome = () => {
   return (
     <div>
       <h2>Student List</h2>
-
+      
       {/* Display the list of students */}
-      <ul>
+      <ul id="studentAdded">
         {students.map((student) => (
           <li key={student.studentId}>
             {student.name} ({student.email})
-            <button onClick={() => openEditStudentModal(student)}>Edit</button>
+            <button id="mainUpdate" onClick={() => openEditStudentModal(student)}>Edit</button>
 
             {/* Render EditStudent component when showEditStudentModal is true */}
             {showEditStudentModal && student === studentToEdit && (
@@ -118,11 +118,11 @@ const AdminHome = () => {
               />
             )}
 
-            <button onClick={() => deleteStudent(student.studentId)}>Delete</button>
+            <button id="delete" onClick={() => deleteStudent(student.studentId)}>Delete</button>
           </li>
         ))}
       </ul>
-      <button onClick={() => setShowAddStudentModal(true)}>Add Student</button>
+      <button id="AddButton" onClick={() => setShowAddStudentModal(true)}>Add Student</button>
       {/* Add Student Modal */}
       {showAddStudentModal && <AddStudent onAddStudent={addStudent} onClose={() => setShowAddStudentModal(false)} />}
     </div>

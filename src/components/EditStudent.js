@@ -24,20 +24,20 @@ const EditStudent = ({ student, onUpdateStudent, onClose }) => {
     <div>
       <h3>Edit Student</h3>
       <label>Name:</label>
-      <input
+      <input 
         type="text"
-        name="name"
+        name="name1"
         value={editedStudent.name}
         onChange={handleInputChange}
       />
       <label>Email:</label>
       <input
         type="email"
-        name="email"
+        name="email1"
         value={editedStudent.email}
         onChange={handleInputChange}
       />
-      <button onClick={handleUpdate}>Update</button>
+      <button id="updatestudent" onClick={handleUpdate}>Update</button>
       <button onClick={onClose}>Cancel</button>
     </div>
   );

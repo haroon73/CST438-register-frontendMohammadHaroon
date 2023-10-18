@@ -31,7 +31,7 @@ const AddStudent = ({ onClose, onAddStudent }) => {
       <form onSubmit={handleSubmit}>
         <div style={{ marginBottom: '10px' }}>
           <label>Name:</label>
-          <input
+          <input name="sName"
             type="text"
             value={name}
             onChange={(e) => setName(e.target.value)}
@@ -40,7 +40,7 @@ const AddStudent = ({ onClose, onAddStudent }) => {
         </div>
         <div style={{ marginBottom: '10px' }}>
           <label>Email:</label>
-          <input
+          <input name="sEmail"
             type="email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
@@ -49,7 +49,7 @@ const AddStudent = ({ onClose, onAddStudent }) => {
         </div>
         {errorMessage && <p>{errorMessage}</p>}
         <div>
-          <button type="submit">Add</button>
+          <button id="Addstudnet" type="submit">Add</button>
           <button type="button" onClick={onClose}>Cancel</button>
         </div>
       </form>
